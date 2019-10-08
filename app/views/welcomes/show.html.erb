@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @welcome.title %>
+</p>
+
+<p>
+  <strong>Subtitle:</strong>
+  <%= @welcome.subtitle %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @welcome.body %>
+</p>
+
+<p>
+  <strong>Subbody:</strong>
+  <%= @welcome.subbody %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @welcome.status %>
+</p>
+
+<p>
+  <strong>Main img:</strong>
+  <%= @welcome.main_img %>
+</p>
+
+<p>
+  <strong>Thumb img:</strong>
+  <%= @welcome.thumb_img %>
+</p>
+
+<%= link_to 'Edit', edit_welcome_path(@welcome) %> |
+<%= link_to 'Back', welcomes_path %>
