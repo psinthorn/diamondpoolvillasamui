@@ -89,7 +89,10 @@ GEM
       warden (~> 1.2.3)
     erubi (1.9.0)
     execjs (2.7.0)
+    f2_view_tool (0.1.0)
     ffi (1.11.1)
+    font-awesome-rails (4.7.0.5)
+      railties (>= 3.2, < 6.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.7.0)
@@ -238,6 +241,8 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   devise (~> 4.7, >= 4.7.1)
+  f2_view_tool (~> 0.1.0)
+  font-awesome-rails (~> 4.7, >= 4.7.0.5)
   jbuilder (~> 2.7)
   jquery-rails
   listen (>= 3.0.5, < 3.2)

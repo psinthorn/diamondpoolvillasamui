@@ -1,0 +1,40 @@
+<div stle="background-color: #eaeaea">
+  <div class="container">
+    <h1 class="featurette-heading">Facilities</h1>
+     </div>
+    <hr class="featurette-divider">
+</div>
+
+<div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Main img</th>
+            <th>Thumb img</th>
+            <th>Status</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @facilities.each do |facility| %>
+            <tr>
+              <td><%= facility.name %></td>
+              <td><%= facility.description %></td>
+              <td><%= facility.main_img %></td>
+              <td><%= facility.thumb_img %></td>
+              <td><%= facility.status %></td>
+              <td><%= link_to 'Show', facility %></td>
+              <td><%= link_to 'Edit', edit_facility_path(facility) %></td>
+              <td><%= link_to 'Destroy', facility, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <br>
+
+      <%= link_to 'New Facility', new_facility_path %>
+</div>

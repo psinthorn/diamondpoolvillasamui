@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @about.title %>
+</p>
+
+<p>
+  <strong>Subtitle:</strong>
+  <%= @about.subtitle %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @about.body %>
+</p>
+
+<p>
+  <strong>Main img:</strong>
+  <%= @about.main_img %>
+</p>
+
+<p>
+  <strong>Thumb img:</strong>
+  <%= @about.thumb_img %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @about.status %>
+</p>
+
+<%= link_to 'Edit', edit_about_path(@about) %> |
+<%= link_to 'Back', abouts_path %>

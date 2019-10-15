@@ -1,0 +1,25 @@
+
+<div class="row feature-banner">
+         <% @features.each do |feature| %>
+         <div class="col-sm-6 col-md-3 col-lg-3">
+             <div class="text-center p-4 mt-5">
+                  <%= fa_icon "#{feature.thumb_img}", style: "font-size: 5.0rem" %>
+               </div>
+            <div class="card m-1 d-block", style="height: 380px">
+               <div class="card-title text-center pt-4">
+                  <h2><%= feature.title %> </h2>
+               </div>
+               <div class="card-body lead text-center">
+                  <%= feature.body %>
+               </div>
+            </div>
+            <%# <% if logged_in?(:admin)%> 
+            <div class="text-right">
+               <%= link_to 'Edit', edit_feature_path(feature), class: "btn btn-secondary" %>
+               <%= link_to 'Destroy', feature, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-secondary" %>
+            </div>
+            <%# <%end%> 
+         </div>
+     <% end %>       
+</div>
+</div>

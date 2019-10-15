@@ -1,0 +1,47 @@
+<%= form_with(model: feature, local: true) do |form| %>
+  <% if feature.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(feature.errors.count, "error") %> prohibited this feature from being saved:</h2>
+
+      <ul>
+        <% feature.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div class="field">
+    <%= form.label :main_img %>
+    <%= form.text_field :main_img %>
+  </div>
+
+  <div class="field">
+    <%= form.label :string %>
+    <%= form.text_field :string %>
+  </div>
+
+  <div class="field">
+    <%= form.label :thumb_img %>
+    <%= form.text_field :thumb_img %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

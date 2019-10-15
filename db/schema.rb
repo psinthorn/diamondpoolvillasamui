@@ -10,10 +10,64 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_08_065543) do
+ActiveRecord::Schema.define(version: 2019_10_10_051326) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "abouts", force: :cascade do |t|
+    t.string "title"
+    t.string "subtitle"
+    t.text "body"
+    t.string "main_img"
+    t.string "thumb_img"
+    t.string "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "title"
+    t.string "address"
+    t.string "city"
+    t.string "province"
+    t.string "country"
+    t.string "postcode"
+    t.string "email"
+    t.string "website"
+    t.string "tel"
+    t.string "fax"
+    t.string "mobile"
+    t.string "lineid"
+    t.string "facebook"
+    t.string "instagram"
+    t.string "main_img"
+    t.string "thumb_img"
+    t.string "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "facilities", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "main_img"
+    t.string "thumb_img"
+    t.string "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "features", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.string "main_img"
+    t.string "string"
+    t.string "thumb_img"
+    t.string "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

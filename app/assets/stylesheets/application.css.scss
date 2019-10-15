@@ -1,5 +1,21 @@
 @import "bootstrap";
+@import "font-awesome";
 
+// Color
+// main purple: #9d1e63
+// main orange: #f7921c
+
+// Reset padding and margin
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Show it is fixed to the top */
+body {
+  min-height: 75rem;
+  // padding-top: 4.5rem;
+}
 // custome css
 
 #background {
@@ -15,4 +31,37 @@
   transform: translateX(-50%) translateY(-50%);
   background: image-url("main-banner.jpg") no-repeat;
   background-size: cover;
+  opacity: 0.8;
+}
+
+.head-banner {
+  background-color: lightsalmon;
+  min-width: 100%;
+  min-height: 75%;
+  opacity: 1;
+}
+
+.feature-banner {
+  min-width: 100%;
+  padding: 30px;
+  background-color: aliceblue;
+  background: image-url("sea-beach.png") no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  z-index: -1000;
+}
+
+.footer-main {
+  background-color: white;
+  min-height: 450px;
+  // margin-top: 3rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+.footer-bottom {
+  background-color: grey;
+  min-height: 24px;
+  margin-top: 0px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }

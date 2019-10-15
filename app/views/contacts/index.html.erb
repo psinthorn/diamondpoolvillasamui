@@ -1,0 +1,46 @@
+
+<div stle="background-color: #eaeaea">
+  <div class="container">
+    <h1 class="featurette-heading">Contact Us</h1>
+     </div>
+    <hr class="featurette-divider">
+</div>
+
+  <div class="container mt-5 mb-5 pt-5 pb-5">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-6">
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-6">
+      
+                <% @contacts.each do |contact| %>
+                 
+                    <td><%= contact.title %></td>
+                    <td><%= contact.address %></td>
+                    <td><%= contact.city %></td>
+                    <td><%= contact.province %></td>
+                    <td><%= contact.country %></td>
+                    <td><%= contact.postcode %></td>
+                    <td><%= contact.email %></td>
+                    <td><%= contact.website %></td>
+                    <td><%= contact.tel %></td>
+                    <td><%= contact.fax %></td>
+                    <td><%= contact.mobile %></td>
+                    <td><%= contact.lineid %></td>
+                    <td><%= contact.facebook %></td>
+                    <td><%= contact.instagram %></td>
+                    <td><%= contact.main_img %></td>
+                    <td><%= contact.thumb_img %></td>
+                    <td><%= contact.status %></td>
+                    <td><%= link_to 'Show', contact %></td>
+                    <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
+                    <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                    <%= link_to 'New Contact', new_contact_path %>
+                 
+      </div>
+    </div>           <% end %>
+  </div>
+
+
+<br>
+
+
