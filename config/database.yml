@@ -78,5 +78,5 @@ test:
 production:
   <<: *default
   database: diamondpoolvilla_com_production
-  username: diamondpoolvilla_com
-  password: <%= ENV['DIAMONDPOOLVILLA_COM_DATABASE_PASSWORD'] %>
+  # username: diamondpoolvilla_com
+  # password: <%= ENV['DIAMONDPOOLVILLA_COM_DATABASE_PASSWORD'] %>
