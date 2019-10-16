@@ -1,0 +1,57 @@
+<%= form_with(model: global, local: true) do |form| %>
+  <% if global.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(global.errors.count, "error") %> prohibited this global from being saved:</h2>
+
+      <ul>
+        <% global.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name_first %>
+    <%= form.text_field :name_first %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name_last %>
+    <%= form.text_field :name_last %>
+  </div>
+
+  <div class="field">
+    <%= form.label :slogan %>
+    <%= form.text_field :slogan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :desc %>
+    <%= form.text_area :desc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :logo %>
+    <%= form.text_field :logo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :keywords %>
+    <%= form.text_area :keywords %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Globals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name first</th>
+      <th>Name last</th>
+      <th>Slogan</th>
+      <th>Title</th>
+      <th>Desc</th>
+      <th>Logo</th>
+      <th>Status</th>
+      <th>Keywords</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @globals.each do |global| %>
+      <tr>
+        <td><%= global.name_first %></td>
+        <td><%= global.name_last %></td>
+        <td><%= global.slogan %></td>
+        <td><%= global.title %></td>
+        <td><%= global.desc %></td>
+        <td><%= global.logo %></td>
+        <td><%= global.status %></td>
+        <td><%= global.keywords %></td>
+        <td><%= link_to 'Show', global %></td>
+        <td><%= link_to 'Edit', edit_global_path(global) %></td>
+        <td><%= link_to 'Destroy', global, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Global', new_global_path %>

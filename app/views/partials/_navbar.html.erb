@@ -10,22 +10,18 @@
                   <%= link_to "Welcome", root_path, class:'nav-link' %>
                   <%= link_to "Villas", abouts_path, class:'nav-link' %>
                   <%= link_to "Facilities", facilities_path, class:'nav-link' %>
-                  <%= link_to "About", abouts_path, class:'nav-link' %>
+                  <%# <%= link_to "About", abouts_path, class:'nav-link' %>
                   <%# <%= link_to "The Artists", profiles_path, class:'nav-link'  %> 
                   <%# <%= link_to "Guest Artists", profiles_path, class:'nav-link' %>
                   <%# <%= link_to "Blog", blogs_path, class:'nav-link' %>  
                   <%= link_to "Contact", contacts_path, class:'nav-link'     %>   
                </ul> 
-                <ul class="navbar-nav" >
-                              <%= fa_icon "instagram", style: "font-size: 1.5rem", class: 'nav-link' %> <a href="#" ></a>
-                              <%= fa_icon "facebook", style: "font-size: 1.5rem", class: 'nav-link' %> <a href="#" ></a>
-                               <%= fa_icon "phone", style: "font-size: 1.5rem", class: 'nav-link' %><a href="tel:999999999999" ></a>
+                <ul class="navbar-nav">            
+                              <a href="https://www.facebook.com/diamondpoolvillakohsamui", target="_blank"><%= fa_icon "facebook", style: "font-size: 1.5rem", class: 'nav-link' %> </a>
+                              <a href="#" ><%= fa_icon "instagram", style: "font-size: 1.5rem", class: 'nav-link' %></a>
+                              <a href="mailto:diamondvilla.samui@gmail.com" ><%= fa_icon "envelope", style: "font-size: 1.5rem", class: 'nav-link' %></a>
+                              <span class="lead text-right"><a href="tel:+66952524878" > <%= fa_icon "phone", style: "font-size: 1.5rem", class: 'nav-link ml-2' %></span></a>
                           <div class="pl-3">
-                              <% if user_signed_in? %>    
-                                  <%= link_to  "Logout", destroy_user_session_path, method: :delete, class:'nav-link' %> 
-                              <% else %>                                              
-                                  <%= link_to "Login", new_user_session_path, class: 'nav-link' %>                       <%# <%= link_to "Register", new_user_registration_path, class:'nav-link' %>                
-                              <% end %>
                           </div>
                 </ul>
           </div>

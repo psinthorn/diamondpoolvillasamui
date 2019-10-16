@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name first:</strong>
+  <%= @global.name_first %>
+</p>
+
+<p>
+  <strong>Name last:</strong>
+  <%= @global.name_last %>
+</p>
+
+<p>
+  <strong>Slogan:</strong>
+  <%= @global.slogan %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @global.title %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @global.desc %>
+</p>
+
+<p>
+  <strong>Logo:</strong>
+  <%= @global.logo %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @global.status %>
+</p>
+
+<p>
+  <strong>Keywords:</strong>
+  <%= @global.keywords %>
+</p>
+
+<%= link_to 'Edit', edit_global_path(@global) %> |
+<%= link_to 'Back', globals_path %>
