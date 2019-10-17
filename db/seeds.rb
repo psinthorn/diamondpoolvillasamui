@@ -93,3 +93,16 @@ puts "4 feature seeded"
     )
 end
 puts "1st global seeded"
+
+1.times do |villa|
+    Villa.create!(
+        title: "Stay with us",
+        name: "Pool Access Villa",
+        body: "At Diamond Pool Villa we have 14 individual villas, 10 of which look directly onto the pool, and 4 are a little more secluded. Each of the villas are 64sqm in size and fully furnished. They have a living space, a kitchen and dining area, a bedroom, bathroom and large balcony.",
+        subbody: "At Diamond Pool Villa we have 14 individual villas, 10 of which look directly onto the pool, and 4 are a little more secluded. Each of the villas are 64sqm in size and fully furnished. They have a living space, a kitchen and dining area, a bedroom, bathroom and large balcony.",
+        main_image: "",
+        thumb_image: "",
+        fa_icon: "home"
+    )
+end
+puts "1st Villa seeded"
