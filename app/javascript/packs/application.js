@@ -17,5 +17,4 @@ require("channels");
 
 //= require jquery3
 //= require popper
-//= require lightbox-bootstrap
 //= require bootstrap-sprockets
