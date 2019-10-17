@@ -1,7 +1,7 @@
 
 <div stle="background-color: #eaeaea">
   <div class="container">
-    <h1 class="featurette-heading">Facilicies</h1>
+    <h1 class="featurette-heading">Amennoties/Facilicies</h1>
      </div>
     <hr class="featurette-divider">
 </div>
@@ -10,58 +10,29 @@
           
       </div>
       <div class="row">
-            <div class="col-sm-12 col-md-5 col-lg-5  float-sm-right">   
-                  <div class="row mt-5">
+            <div class="col-sm-12 col-md-6 col-lg-6">  
+
+                <% @facilities.each do |facility| %> 
+                  <div class="row mt-5">         
                         <div class="col-sm-12 col-md-4 col-lg-4">  
                               <%= image_tag('diamond-poolvilla-pool-01.jpg', class: "img-fluid") %>
                         </div>
                         <div class="col-sm-12 col-md-4 col-lg-4">  
-                              <%= image_tag('diamond-poolvilla-pool-02.jpg', class: "img-fluid") %>
+                              <%= facility.name %>
                         </div>  
                         <div class="col-sm-12 col-md-4 col-lg-4">  
-                              <%= image_tag('diamond-poolvilla-terrace.jpg', class: "img-fluid") %>
-                        </div>  
-                  </div>      
+                              <%= facility.description %>
+                        </div> 
 
-                  <div class="row mt-3"> 
-                        <div class="col-sm-12 col-md-4 col-lg-4">  
-                              <%= image_tag('diamond-poolvilla-bedroom-01.jpg', class: "img-fluid") %>
-                        </div>
-                        <div class="col-sm-12 col-md-4 col-lg-4">  
-                              <%= image_tag('diamond-poolvilla-bedroom-02.jpg', class: "img-fluid") %>
-                        </div>  
-                        <div class="col-sm-12 col-md-4 col-lg-4">  
-                              <%= image_tag('diamond-poolvilla-livingroom-01.jpg', class: "img-fluid") %>
-                        </div>  
-                  </div>
-
-                  <div class="row mt-3 mb-5">
-                        <div class="col-sm-12 col-md-4 col-lg-4">  
-                              <%= image_tag('diamond-poolvilla-kitchen-01.jpg', class: "img-fluid") %>
-                        </div>
-                        <div class="col-sm-12 col-md-4 col-lg-4">  
-                              <%= image_tag('diamond-poolvilla-kitchen-02.jpg', class: "img-fluid") %>
-                        </div>  
-                        <div class="col-sm-12 col-md-4 col-lg-4">  
-                              <%= image_tag('diamond-poolvilla-restroom.jpg', class: "img-fluid") %>
-                        </div>  
-                  </div>
-                    
+                         <%= link_to 'Edit', edit_facility_path(facility) %>
+                              <%= link_to 'Destroy', facility, method: :delete, data: { confirm: 'Are you sure?' } %>     
+                  </div> 
+                <% end %> 
             </div>
-            <div class="col-sm-12 col-md-7 col-lg-7 float-sm-left">
-                        <h1 class="featurette-heading pl-3"><%= facility.title %></h1>
-                         <h2 class="text-muted pl-3"><%= facility.subtitle %></h2>
-                        <div class="lead mt-3 pl-3">
-                              <p>
-                                    <%= facility.body %>
-                              </p>
-
-                              <p class="mt5">
-                                    <%= facility.subbody %>
-                              </p>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                       
                               
-                              <%= link_to 'Edit', edit_facility_path(facility) %>
-                              <%= link_to 'Destroy', facility, method: :delete, data: { confirm: 'Are you sure?' } %>
+                             
                        </div>
             </div>
       </div>

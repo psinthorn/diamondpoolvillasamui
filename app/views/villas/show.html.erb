@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @villa.name %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @villa.body %>
+</p>
+
+<p>
+  <strong>Subbody:</strong>
+  <%= @villa.subbody %>
+</p>
+
+<p>
+  <strong>Main image:</strong>
+  <%= @villa.main_image %>
+</p>
+
+<p>
+  <strong>Thumb image:</strong>
+  <%= @villa.thumb_image %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @villa.status %>
+</p>
+
+<%= link_to 'Edit', edit_villa_path(@villa) %> |
+<%= link_to 'Back', villas_path %>
